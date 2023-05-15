@@ -1,7 +1,11 @@
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/controller/Controller.java
+/home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/service/ISubsectionService.java
+/home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/repository/SubsectionRepository.java
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/service/ISectionService.java
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/repository/SectionRepository.java
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/service/SectionService.java
+/home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/service/SubsectionService.java
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/PortfolioBeApplication.java
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/WebConfig.java
 /home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/models/Section.java
+/home/gabihak/Documents/YoProgramo/PortfolioBE/src/main/java/com/gabriel/PortfolioBE/models/Subsection.java

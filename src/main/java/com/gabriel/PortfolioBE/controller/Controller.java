@@ -1,9 +1,12 @@
 package com.gabriel.PortfolioBE.controller;
 
 import com.gabriel.PortfolioBE.models.Section;
+import com.gabriel.PortfolioBE.models.Subsection;
 import com.gabriel.PortfolioBE.service.ISectionService;
+import com.gabriel.PortfolioBE.service.ISubsectionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,18 +16,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "http://localhost:4200/login/") 
 @RestController
 public class Controller {
     
-    @Autowired
+    
     private ISectionService iss;
+    private ISubsectionService isubser;
+
+    @Autowired
+    public Controller(ISectionService iss, ISubsectionService isubser) {
+        this.iss = iss;
+        this.isubser = isubser;
+    }
     
     @PostMapping("/newSection")
     public void newSection(@RequestBody Section sec){
         iss.newSection(sec);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/viewSections")
     @ResponseBody
     public List<Section> viewSections(){
@@ -32,7 +42,28 @@ public class Controller {
     }
     
     @DeleteMapping("/deleteSection/{id}")
-    public void borrarPersona(@PathVariable Long id){
+    public void deleteSection(@PathVariable Long id){
         iss.deleteSection(id);
     }
+    
+    @GetMapping("/searchSectionByTitle/{title}")
+    public List<Section> searchSectionByTitle(@PathVariable String title){
+        return iss.searchSectionByTitle(title);
+    }
+    
+    @PostMapping("/newSubsection")
+    public void newSubsection(@RequestBody Subsection sub){
+        isubser.newSubsection(sub);
+   }
+    
+    @GetMapping("/viewSubsections")
+    @ResponseBody
+    public List<Subsection> viewSubsections(){
+        return isubser.viewSubsections();
+    }
+    
+    //@DeleteMapping("/deleteSubsection/{id}")
+    //public void deleteSubsection(@PathVariable Long id){
+        //isubser.deleteSubsection(id);
+    //}
 }
