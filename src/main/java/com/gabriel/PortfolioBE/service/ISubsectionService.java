@@ -8,4 +8,5 @@ public interface ISubsectionService {
     public void newSubsection(Subsection sub);
     public void deleteSubsection(Long id);
     public Subsection searchSubsection(Long id);
+    public List<Subsection> searchSubsectionBySection(String sec);
 }

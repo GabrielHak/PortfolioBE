@@ -6,7 +6,6 @@ import com.gabriel.PortfolioBE.service.ISectionService;
 import com.gabriel.PortfolioBE.service.ISubsectionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -62,8 +61,13 @@ public class Controller {
         return isubser.viewSubsections();
     }
     
-    //@DeleteMapping("/deleteSubsection/{id}")
-    //public void deleteSubsection(@PathVariable Long id){
-        //isubser.deleteSubsection(id);
-    //}
+    @DeleteMapping("/deleteSubsection/{id}")
+    public void deleteSubsection(@PathVariable Long id){
+        isubser.deleteSubsection(id);
+    }
+    
+    @GetMapping("/searchSubsectionBySection/{sec}")
+    public List<Subsection> searchSubsectionBySection(@PathVariable String sec){
+        return isubser.searchSubsectionBySection(sec);
+   }
 }

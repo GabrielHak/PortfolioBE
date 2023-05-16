@@ -31,5 +31,10 @@ public class SubsectionService implements ISubsectionService{
     public Subsection searchSubsection(Long id) {
         return subRepo.findById(id).orElse(null);
     }
+
+    @Override
+    public List<Subsection> searchSubsectionBySection(String sec) {
+        return subRepo.searchBySection(sec);
+    }
     
 }

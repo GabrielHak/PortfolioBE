@@ -1,11 +1,12 @@
-com/gabriel/PortfolioBE/WebConfig.class
-com/gabriel/PortfolioBE/service/ISectionService.class
 com/gabriel/PortfolioBE/repository/SectionRepository.class
 com/gabriel/PortfolioBE/PortfolioBeApplication.class
 com/gabriel/PortfolioBE/service/SubsectionService.class
-com/gabriel/PortfolioBE/models/Section.class
-com/gabriel/PortfolioBE/repository/SubsectionRepository.class
-com/gabriel/PortfolioBE/service/ISubsectionService.class
 com/gabriel/PortfolioBE/controller/Controller.class
 com/gabriel/PortfolioBE/service/SectionService.class
 com/gabriel/PortfolioBE/models/Subsection.class
+com/gabriel/PortfolioBE/WebConfig.class
+com/gabriel/PortfolioBE/service/ISectionService.class
+com/gabriel/PortfolioBE/models/Section.class
+com/gabriel/PortfolioBE/WebMvcConfiguration.class
+com/gabriel/PortfolioBE/repository/SubsectionRepository.class
+com/gabriel/PortfolioBE/service/ISubsectionService.class
