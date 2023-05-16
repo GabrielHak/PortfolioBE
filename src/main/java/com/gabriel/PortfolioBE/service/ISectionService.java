@@ -2,7 +2,6 @@ package com.gabriel.PortfolioBE.service;
 
 import com.gabriel.PortfolioBE.models.Section;
 import java.util.List;
-import java.util.Optional;
 
 public interface ISectionService {
     public List<Section> viewSections();

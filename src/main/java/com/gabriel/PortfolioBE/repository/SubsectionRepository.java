@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SubsectionRepository extends JpaRepository <Subsection, Long> {
-    @Query(
-            value = "SELECT t FROM Subsection t WHERE t.sectionId = (SELECT p.id FROM Section p WHERE p.title LIKE %?1%)") 
+    @Query(value = "SELECT t FROM Subsection t WHERE t.sectionId = (SELECT p.id FROM Section p WHERE p.title LIKE %?1%)") 
     List<Subsection> searchBySection(String sec);
 }

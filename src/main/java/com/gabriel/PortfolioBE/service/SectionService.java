@@ -2,9 +2,7 @@ package com.gabriel.PortfolioBE.service;
 
 import com.gabriel.PortfolioBE.models.Section;
 import com.gabriel.PortfolioBE.repository.SectionRepository;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
